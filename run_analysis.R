@@ -64,4 +64,4 @@ all_data <- rbind(train_data, test_data)
 tidy_data <- aggregate(all_data[,selected_features], list(subject = all_data$subject, Activity_Name=all_data$Activity_Name), mean)
 
 # Save tidy data to file
-write.table(tidy_data, file = "./tidy_data.txt")
+write.table(tidy_data, file = "./tidy_data.txt", row.name=FALSE)
